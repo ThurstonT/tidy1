@@ -57,6 +57,18 @@ when building the final data set I built each row of data one mean at a time and
 run_analysis() The run_analysis() function is the main function of this software. It is the function that will be called to perform the analysis. When the dataframe is returned from mean_std_data_set() with the subject, activity, mean and standard deviation infromaiton the final processing begins. This function will deterine the mean for each of the thirty subject for each of their six activities.
 
 
+The output data file will have 180 rows of data.  There are 30 participants or subjects and each engaged in six activities, therefore 180 rows.  Each row has two row labels "Subject" and "Activity"
+Subject can take on the values of 'Subject-1' to 'Subject-30'
+Activity can take the following six values. 
+WALKING
+WALKING_UPSTAIRS
+WALKING_DOWNSTAIRS
+SITTING
+STANDING
+LAYING
+
+There are 79 additional columns as shown below.  
+
 
 
 
