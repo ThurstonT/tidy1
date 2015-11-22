@@ -44,23 +44,21 @@ header() The header() function builds the header for the data files. The header 
 
 xlate_activity(activity_type) The xlate_activity(activity_type) function will translate the activity number in the y_test.txt and y_train.txt file to an activity.
 
-
 mean_std_data_set() The mean_std_data_set() function reads the data files into data frames. Puts a header on the data frames, merges the dataframes and then makes a new dataframe from columns that have only the subject, activity and columns containing mean and standard deviation information.
 
 ******  Important Point  ********
 Some of the column names in the data file have the same name.  when processing the data this issue must be addressed. Either there are duplicate columns of data or there are duplicate column names.  There are multiple instances of column names being duplicated.  The data set has over 500 columns.  The issue does not have to be the same for each occurrence of duplication. It is possible that in some instances the column name has inadvertently been duplicated in other instances the column of data has been duplicated.  I have elected to pre-pend the column name with the column number.  This action makes the column name unique and permits the user of the data to trace the column of data back to the source of the data.  All the data is available and the column names are unique.  
 
-      
+*************************
 
-xlate_activity(activity_type) The xlate_activity(activity_type) function will translate the activity number in the y_test.txt and y_train.txt file to an activity.
-
-mean_std_data_set() The mean_std_data_set() function reads the data files into data frames. Puts a header on the data frames, murges the dataframes and then makes a new dataframe from columns that have only the subject, activity and columns containing mean and standard deviation information.
-
-run_analysis() The run_analysis() function is the main function of this software. It is the function that will be called to perform the analysis. When the dataframe is returned from mean_std_data_set() with the subject, activity, mean and standard deviation infromaiton the final processing begins. This function will deterine the mean for each of the thirty subject for each of their six activities.
+when calculating the mean of each of the columns I chose to remove data that is not a number.  
+when building the final data set I built each row of data one mean at a time and used the rbind function to bind it to the right of the vector.  When this activity was complete I used the cbind function to bind it to the data frame. 
 
 
 
 run_analysis() The run_analysis() function is the main function of this software. It is the function that will be called to perform the analysis. When the dataframe is returned from mean_std_data_set() with the subject, activity, mean and standard deviation infromaiton the final processing begins. This function will deterine the mean for each of the thirty subject for each of their six activities.
+
+
 
 
 
