@@ -47,6 +47,7 @@ xlate_activity(activity_type) The xlate_activity(activity_type) function will tr
 mean_std_data_set() The mean_std_data_set() function reads the data files into data frames. Puts a header on the data frames, merges the dataframes and then makes a new dataframe from columns that have only the subject, activity and columns containing mean and standard deviation information.
 
 ******  Important Point  ********
+
 Some of the column names in the data file have the same name.  when processing the data this issue must be addressed. Either there are duplicate columns of data or there are duplicate column names.  There are multiple instances of column names being duplicated.  The data set has over 500 columns.  The issue does not have to be the same for each occurrence of duplication. It is possible that in some instances the column name has inadvertently been duplicated in other instances the column of data has been duplicated.  I have elected to pre-pend the column name with the column number.  This action makes the column name unique and permits the user of the data to trace the column of data back to the source of the data.  All the data is available and the column names are unique.  
 
 *************************
