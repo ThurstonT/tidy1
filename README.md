@@ -45,4 +45,11 @@ mean_std_data_set()
 The mean_std_data_set() function reads the data files into data frames.  Puts a header on the data frames, murges the dataframes and then makes a new dataframe from columns that have only the subject, activity and columns containing mean and standard deviation information.  
 
 run_analysis()
+The run_analysis() function is the main function of this software.  It is the function that will be called to perform the analysis.  When the dataframe is returned from mean_std_data_set() with the subject, activity, mean and standard deviation infromaiton the final processing begins.  This function will deterine the mean for each of the thirty subject for each of their six activities.  
+
+Important Point:
+If there is an entry in the data set that is not a valid number it is ignored during the mean operation. 
+
+When the resulting data frame, named final_data, is complete it is written to a file nameed clean-tidy.txt.  The file will be written to the c:/Coursera/data sub-directory. 
+
 
