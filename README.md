@@ -27,3 +27,22 @@ In the train directory there is a dataset named x_train.txt.  It is a file of nu
 The header information for both files is the same and is in the UCI HAR Dataset directory in the features.txt file.  The row label information for the ./train and ./test sub-directories with the data file.   The subject_test.txt file in the ./test subdirectory and the subject_train.txt in the ./train contain each part of the row label information.  This information must be appended to the datasets.  Importantly, the row label information has two pieces subject and activity.  
 The activity information is encoded.  The row label information for activity is numeric and uses the number 1 through 6.  The files are in the ./test and ./train sub-directories and are named y_test.txt and y_train.txt respectively.   The information in the UCI HAR Dataset directory in the activity_labels.txt file shows the translation between the numeric data the activity being performed.  Using this information the row activity information can be translated in the activity being performed.  This transformation allows the row information to be easily understood.  For example, instead of seeing the data for “Subject-1” engaging in “1” activity we can see the data for  “Subject-1” “WALKING”.
 
+The code for this project is in the run_analysis.R file.
+There are four functions in the file.  
+header()
+xlate_activity(activity_type)
+mean_std_data_set()
+run_analysis()
+
+header()
+The header() function builds the header for the data files.  The header information must be unique as some of column headers in the features.txt file are the same.  The column number was prepended to the column name assuring uniqueness of the column name and ensuring the processed data associated with the column name can be traced back to the orignating column in the initial data sets.  
+
+
+xlate_activity(activity_type)
+The xlate_activity(activity_type) function will translate the activity number in the y_test.txt and y_train.txt file to an activity.  
+
+mean_std_data_set()
+The mean_std_data_set() function reads the data files into data frames.  Puts a header on the data frames, murges the dataframes and then makes a new dataframe from columns that have only the subject, activity and columns containing mean and standard deviation information.  
+
+run_analysis()
+
