@@ -52,9 +52,7 @@ Some of the column names in the data file have the same name.  when processing t
 *************************
 
 when calculating the mean of each of the columns I chose to remove data that is not a number.  
-when building the final data set I built each row of data one mean at a time and used the rbind function to bind it to the right of the vector.  When this activity was complete I used the cbind function to bind it to the data frame. 
-
-
+when building the final data set I built each row of data one mean at a time and used the rbind function to bind the mean to the right of the data structure.  When this activity was complete I used the cbind function to bind it to the data frame. 
 
 run_analysis() The run_analysis() function is the main function of this software. It is the function that will be called to perform the analysis. When the dataframe is returned from mean_std_data_set() with the subject, activity, mean and standard deviation infromaiton the final processing begins. This function will deterine the mean for each of the thirty subject for each of their six activities.
 
