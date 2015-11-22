@@ -44,14 +44,13 @@ header() The header() function builds the header for the data files. The header 
 
 xlate_activity(activity_type) The xlate_activity(activity_type) function will translate the activity number in the y_test.txt and y_train.txt file to an activity.
 
-mean_std_data_set() The mean_std_data_set() function reads the data files into data frames. Puts a header on the data frames, murges the dataframes and then makes a new dataframe from columns that have only the subject, activity and columns containing mean and standard deviation information.
+
+mean_std_data_set() The mean_std_data_set() function reads the data files into data frames. Puts a header on the data frames, merges the dataframes and then makes a new dataframe from columns that have only the subject, activity and columns containing mean and standard deviation information.
 
 ******  Important Point  ********
-        
-The code for this project is in the run_analysis.R file. There are four functions in the file.
-header() xlate_activity(activity_type) mean_std_data_set() run_analysis()
+Some of the column names in the data file have the same name.  when processing the data this issue must be addressed. Either there are duplicate columns of data or there are duplicate column names.  There are multiple instances of column names being duplicated.  The data set has over 500 columns.  The issue does not have to be the same for each occurrence of duplication. It is possible that in some instances the column name has inadvertently been duplicated in other instances the column of data has been duplicated.  I have elected to pre-pend the column name with the column number.  This action makes the column name unique and permits the user of the data to trace the column of data back to the source of the data.  All the data is available and the column names are unique.  
 
-header() The header() function builds the header for the data files. The header information must be unique as some of column headers in the features.txt file are the same. The column number was prepended to the column name assuring uniqueness of the column name and ensuring the processed data associated with the column name can be traced back to the orignating column in the initial data sets.
+      
 
 xlate_activity(activity_type) The xlate_activity(activity_type) function will translate the activity number in the y_test.txt and y_train.txt file to an activity.
 
