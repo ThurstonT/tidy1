@@ -32,25 +32,36 @@ There will also be a column named Activity.  Each row will have an activity.  Th
 6 LAYING
 
 The file containing this information is named activity_lables.txt and is located in the UCI HAR Dataset directory. 
-The files containing the activity type for the dataset is in the directory for the datasets.  The information is numeric and will be translated from numbers to activity by the run_analysis.R software.  
+The files containing the activity type for the dataset is in the directory with the respective datasets.  The information is numeric and will be translated from numbers to activity by the run_analysis.R software.  
+
+The code for this project is in the run_analysis.R file. There are four functions in the file.
+1) header() 
+2) xlate_activity(activity_type) 
+3) mean_std_data_set() 
+4) run_analysis()
+
+header() The header() function builds the header for the data files. The header information must be unique as some of column headers in the features.txt file are the same. The column number was prepended to the column name assuring uniqueness of the column name and ensuring the processed data associated with the column name can be traced back to the orignating column in the initial data sets.
+
+xlate_activity(activity_type) The xlate_activity(activity_type) function will translate the activity number in the y_test.txt and y_train.txt file to an activity.
+
+mean_std_data_set() The mean_std_data_set() function reads the data files into data frames. Puts a header on the data frames, murges the dataframes and then makes a new dataframe from columns that have only the subject, activity and columns containing mean and standard deviation information.
+
+******  Important Point  ********
+        
+The code for this project is in the run_analysis.R file. There are four functions in the file.
+header() xlate_activity(activity_type) mean_std_data_set() run_analysis()
+
+header() The header() function builds the header for the data files. The header information must be unique as some of column headers in the features.txt file are the same. The column number was prepended to the column name assuring uniqueness of the column name and ensuring the processed data associated with the column name can be traced back to the orignating column in the initial data sets.
+
+xlate_activity(activity_type) The xlate_activity(activity_type) function will translate the activity number in the y_test.txt and y_train.txt file to an activity.
+
+mean_std_data_set() The mean_std_data_set() function reads the data files into data frames. Puts a header on the data frames, murges the dataframes and then makes a new dataframe from columns that have only the subject, activity and columns containing mean and standard deviation information.
+
+run_analysis() The run_analysis() function is the main function of this software. It is the function that will be called to perform the analysis. When the dataframe is returned from mean_std_data_set() with the subject, activity, mean and standard deviation infromaiton the final processing begins. This function will deterine the mean for each of the thirty subject for each of their six activities.
 
 
 
+run_analysis() The run_analysis() function is the main function of this software. It is the function that will be called to perform the analysis. When the dataframe is returned from mean_std_data_set() with the subject, activity, mean and standard deviation infromaiton the final processing begins. This function will deterine the mean for each of the thirty subject for each of their six activities.
 
 
-
-
-
-
-tudy design and data processing
-
-Collection of the raw data
-
-Description of how the data was collected.
-
-Notes on the original (raw) data
-
-Some additional notes (if avaialble, otherwise you can leave this section out).
-
-Creating the tidy datafile
 
